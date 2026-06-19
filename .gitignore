@@ -37,3 +37,17 @@ yarn-error.log*
 
 # Coverage reports
 coverage/
+
+# Secrets & Credentials
+.secret_tokens.txt
+secrets.json
+*.pem
+*.key
+*.cert
+*.p12
+*.publish.yml
+*.credentials
+
+# Personal / Local configs
+.vscode/settings.json
+.vscode/tasks.json
