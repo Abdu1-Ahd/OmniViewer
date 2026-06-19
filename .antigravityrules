@@ -16,3 +16,10 @@
 ## 3. Tool & Communication Rules
 *   Prefix responses with the appropriate mode: `[PLAN]`, `[BUILD]`, `[REVIEW]`, `[DEBUG]`, `[REFACTOR]`, or `[AUDIT]`.
 *   Verify output rather than assuming success.
+## 4. OmniViewer Specific Context & Architecture
+*   **Zero Cost & Open Source**: The project relies entirely on free tooling (GitHub Actions, Open VSX Registry). Never suggest paid tiers or services.
+*   **Publishing Strategy**: Publish targets are both Open VSX and VS Code Marketplace. Tokens are stored locally in `C:\Users\zawia\.antigravity\system-handling\.secret_tokens.txt`. DO NOT publish early partial releases; the extension must support all formats before the initial v1.0.0 release.
+*   **Ponytail Engineering**: Enforce `ponytail` (full) and `ponytail-review` skills at all times. Standard library first, native platform features first, minimum dependencies. Mark deliberate simplifications with `// ponytail:` comments.
+*   **Webview Architecture**: Extension host is bundled via `esbuild.js`. Webview panels use raw vanilla HTML/CSS/JS (no framework) for minimum overhead. Do NOT bundle webview assets.
+*   **Line Endings**: LF line endings are enforced project-wide via `.gitattributes`.
+*   **Assets**: The main extension icon is located at `media/logo.png`.
