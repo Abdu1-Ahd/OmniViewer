@@ -274,8 +274,6 @@
     "build": "node esbuild.js",
     "watch": "node esbuild.js --watch",
     "lint": "eslint src --ext ts",
-    "format": "prettier --write \"src/**/*.{ts,js,html,css}\"",
-    "format:check": "prettier --check \"src/**/*.{ts,js,html,css}\"",
     "test": "node ./out/test/runTest.js",
     "package": "vsce package"
   },
