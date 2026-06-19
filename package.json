@@ -1,0 +1,294 @@
+{
+  "name": "omniviewer",
+  "displayName": "OmniViewer",
+  "description": "The Ultimate Rich-File Viewer for VS Code — view and edit any file type in a satisfying, blazing-fast, lightweight way.",
+  "version": "0.1.0",
+  "publisher": "Abdu1-Ahd",
+  "license": "MIT",
+  "icon": "media/icons/omniviewer.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Abdu1-Ahd/OmniViewer"
+  },
+  "bugs": {
+    "url": "https://github.com/Abdu1-Ahd/OmniViewer/issues"
+  },
+  "homepage": "https://github.com/Abdu1-Ahd/OmniViewer#readme",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Visualization"
+  ],
+  "keywords": [
+    "viewer",
+    "csv",
+    "zip",
+    "pdf",
+    "svg",
+    "3d",
+    "sqlite",
+    "excel",
+    "parquet",
+    "epub",
+    "archive",
+    "image"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "omniviewer.image",
+        "displayName": "OmniViewer: Image",
+        "selector": [
+          {
+            "filenamePattern": "*.png"
+          },
+          {
+            "filenamePattern": "*.jpg"
+          },
+          {
+            "filenamePattern": "*.jpeg"
+          },
+          {
+            "filenamePattern": "*.gif"
+          },
+          {
+            "filenamePattern": "*.webp"
+          },
+          {
+            "filenamePattern": "*.avif"
+          },
+          {
+            "filenamePattern": "*.ico"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "omniviewer.svg",
+        "displayName": "OmniViewer: SVG Inspector",
+        "selector": [
+          {
+            "filenamePattern": "*.svg"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "omniviewer.csv",
+        "displayName": "OmniViewer: Table",
+        "selector": [
+          {
+            "filenamePattern": "*.csv"
+          },
+          {
+            "filenamePattern": "*.tsv"
+          },
+          {
+            "filenamePattern": "*.jsonl"
+          },
+          {
+            "filenamePattern": "*.ndjson"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "omniviewer.excel",
+        "displayName": "OmniViewer: Excel",
+        "selector": [
+          {
+            "filenamePattern": "*.xlsx"
+          },
+          {
+            "filenamePattern": "*.xls"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "omniviewer.parquet",
+        "displayName": "OmniViewer: Parquet",
+        "selector": [
+          {
+            "filenamePattern": "*.parquet"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "omniviewer.archive",
+        "displayName": "OmniViewer: Archive",
+        "selector": [
+          {
+            "filenamePattern": "*.zip"
+          },
+          {
+            "filenamePattern": "*.tar"
+          },
+          {
+            "filenamePattern": "*.tar.gz"
+          },
+          {
+            "filenamePattern": "*.tgz"
+          },
+          {
+            "filenamePattern": "*.7z"
+          },
+          {
+            "filenamePattern": "*.rar"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "omniviewer.pdf",
+        "displayName": "OmniViewer: PDF",
+        "selector": [
+          {
+            "filenamePattern": "*.pdf"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "omniviewer.epub",
+        "displayName": "OmniViewer: EPUB",
+        "selector": [
+          {
+            "filenamePattern": "*.epub"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "omniviewer.model3d",
+        "displayName": "OmniViewer: 3D Model",
+        "selector": [
+          {
+            "filenamePattern": "*.gltf"
+          },
+          {
+            "filenamePattern": "*.glb"
+          },
+          {
+            "filenamePattern": "*.stl"
+          },
+          {
+            "filenamePattern": "*.obj"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "omniviewer.sqlite",
+        "displayName": "OmniViewer: SQLite",
+        "selector": [
+          {
+            "filenamePattern": "*.sqlite"
+          },
+          {
+            "filenamePattern": "*.sqlite3"
+          },
+          {
+            "filenamePattern": "*.db"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "omniviewer.duckdb",
+        "displayName": "OmniViewer: DuckDB",
+        "selector": [
+          {
+            "filenamePattern": "*.duckdb"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "omniviewer.mermaid",
+        "displayName": "OmniViewer: Mermaid Diagram",
+        "selector": [
+          {
+            "filenamePattern": "*.mmd"
+          },
+          {
+            "filenamePattern": "*.mermaid"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "omniviewer.diagram",
+        "displayName": "OmniViewer: Diagram",
+        "selector": [
+          {
+            "filenamePattern": "*.drawio"
+          },
+          {
+            "filenamePattern": "*.excalidraw"
+          }
+        ],
+        "priority": "default"
+      }
+    ],
+    "configuration": {
+      "title": "OmniViewer",
+      "properties": {
+        "omniviewer.maxTableRows": {
+          "type": "number",
+          "default": 10000,
+          "description": "Maximum rows to display at once in table viewers."
+        },
+        "omniviewer.csvDelimiter": {
+          "type": "string",
+          "default": "auto",
+          "enum": [
+            "auto",
+            ",",
+            ";",
+            "\t",
+            "|"
+          ],
+          "description": "Default CSV delimiter. Use 'auto' for automatic detection."
+        },
+        "omniviewer.theme": {
+          "type": "string",
+          "default": "auto",
+          "enum": [
+            "auto",
+            "dark",
+            "light"
+          ],
+          "description": "Viewer theme. 'auto' follows VS Code's current theme."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "lint": "eslint src --ext ts",
+    "format": "prettier --write \"src/**/*.{ts,js,html,css}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,js,html,css}\"",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "@types/vscode": "^1.125.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vscode/test-electron": "^2.5.2",
+    "@vscode/vsce": "^2.32.0",
+    "esbuild": "^0.20.2",
+    "eslint": "^8.57.1",
+    "prettier": "^3.8.4",
+    "typescript": "^5.9.3"
+  }
+}
