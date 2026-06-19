@@ -1,0 +1,38 @@
+## Tabular & Big Data
+* Comma-Separated Values (`.csv`)
+* Tab-Separated Values (`.tsv`)
+* Apache Parquet (`.parquet`)
+* Microsoft Excel (`.xlsx`, `.xls`)
+* JSON Lines (`.jsonl`, `.ndjson`)
+
+## Vector & Raster Graphics
+* Scalable Vector Graphics (`.svg`)
+* WebP Image (`.webp`)
+* AVIF Image (`.avif`)
+* Standard Images (`.png`, `.jpg`, `.jpeg`, `.gif`)
+* Icon Files (`.ico`)
+
+## Archives & Compressed
+* ZIP Archive (`.zip`)
+* Tarball (`.tar`, `.tar.gz`, `.tgz`)
+* 7-Zip (`.7z`)
+* RAR Archive (`.rar`)
+
+## Structured Documents
+* Portable Document Format (`.pdf`)
+* Markdown (`.md`)
+* EPUB Book (`.epub`)
+
+## 3D Models & CAD
+* GL Transmission Format (`.gltf`, `.glb`)
+* Stereolithography (`.stl`)
+* Wavefront OBJ (`.obj`)
+
+## Diagrams & Visuals
+* Mermaid (`.mermaid`, `.mmd`)
+* Excalidraw (`.excalidraw`)
+* Drawio (`.drawio`)
+
+## Local Databases
+* SQLite Database (`.sqlite`, `.db`, `.sqlite3`)
+* DuckDB (`.duckdb`)
