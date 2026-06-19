@@ -51,3 +51,7 @@ secrets.json
 # Personal / Local configs
 .vscode/settings.json
 .vscode/tasks.json
+
+# Internal AI / Agent Context
+skills/
+.antigravityrules
